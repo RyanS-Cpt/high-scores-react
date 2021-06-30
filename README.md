@@ -18,6 +18,7 @@ Example Screenshot
 Level 1 challenge screenshot example.
 
 Example Screenshot
+#react-high-score-tables-example-layout.png
 
 Level 1 Challenge
 Write a React app which displays high score tables for the given data.
