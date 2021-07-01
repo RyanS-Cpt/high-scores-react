@@ -1,16 +1,19 @@
-Challenge: "High Score Tables (React)"
+# Challenge: "High Score Tables (React)"
 
-Challenge Overview
+`Challenge Overview`
 
 Make a React app which lists some high score tables. The scores data is provided for you.
 
-Difficulty Level
+## Difficulty Level
+
 This is a beginner challenge. Level 1 can be completed by students who have completed week 1 of the CYF React module.
 
-Pre-reqs
+## Pre-reqs
+
 react props
 array.map method as used in React JSX
-To finish level 4
+
+## To finish level 4
 
 event handling (handle a button click)
 Keeping state with the state hook (useState)
@@ -18,9 +21,11 @@ Example Screenshot
 Level 1 challenge screenshot example.
 
 Example Screenshot
-#react-high-score-tables-example-layout.png
 
-Level 1 Challenge
+[Example](react-high-score-tables-example-layout.png)
+
+### Level 1 Challenge
+
 Write a React app which displays high score tables for the given data.
 
 Each country must have its own High Score table displayed.
@@ -54,21 +59,30 @@ The netlify site suffix should be -scores
 
 so...
 
-cyf-YOURGITHUBUSERNAME-scores
+`cyf-YOURGITHUBUSERNAME-scores`
 
-Level 2
+### Level 2
+
 Present the High Score Tables sorted alphabetically by country name
-Level 3
+
+### Level 3
+
 Within each individual table, show the highest scores first - i.e. sort the scores numerically, descending.
-Level 4 - advanced (needs content from React week 2)
+
+### Level 4 - advanced (needs content from React week 2)
+
 Add a single button at the top of the page which toggles the sort order of every high-score-table between ascending and descending by scores. This will require some study about event handlers and the use of a "State hook".
-Level 5 - advanced
+
+### Level 5 - advanced
+
 Add a "world-wide" table, shown first, which shows the sorted high scores from EVERYONE, regardless of country.
-Bonus
+
+### Bonus
+
 Add your own country and scores!
 Add some old-skool videogame icons or animations
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
