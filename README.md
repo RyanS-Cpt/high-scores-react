@@ -17,11 +17,10 @@ array.map method as used in React JSX
 
 event handling (handle a button click)
 Keeping state with the state hook (useState)
-Example Screenshot
+
 Level 1 challenge screenshot example.
 
-Example Screenshot
-
+Example Screenshot:
 [Example](react-high-score-tables-example-layout.png)
 
 ### Level 1 Challenge
