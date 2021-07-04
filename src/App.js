@@ -8,9 +8,7 @@ function App() {
 			<header className="App-header">
 				<h1>High Scores per Country</h1>
 			</header>
-			<body>
-				<Tables />
-			</body>
+			<Tables />
 		</div>
 	);
 }

@@ -18,11 +18,13 @@ th{
 }
 
 td{
+  display: flex;
   border: 1px dashed green;
+  justify-content: space-between;
 }
 
 span{
-  padding-left: 30%;
+  padding-left: 0%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
