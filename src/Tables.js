@@ -10,6 +10,13 @@ const Tables = () => {
 						<tr>
 							<th>High Scores:{country.name}</th>
 						</tr>
+						{country.scores.map(score=>{
+							return(
+								<tr>
+									<td>{score.n}<span></span>{score.s}</td>
+								</tr>
+							)
+						})}
 					</table>
 				)
 			})}
