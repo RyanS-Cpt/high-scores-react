@@ -8,11 +8,21 @@
 }
 
 table{
-  padding-left: 40%;
+  width: 75%;
+  margin-left: 10%;
+  border: 2px solid black;
+}
+
+th{
+  border: 1.5px solid blue;
+}
+
+td{
+  border: 1px dashed green;
 }
 
 span{
-  padding-left: 20%;
+  padding-left: 30%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
