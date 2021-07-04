@@ -1,22 +1,19 @@
 import React from "react";
-// import allScores from './scores.js';
+import allScores from './scores.js';
 
 const Tables = () => {
 	return (
-		<table>
-			<tr>
-				<th>High Scores:</th>
-			</tr>
-			<tr>
-				<td>High Scores:</td>
-			</tr>
-			<tr>
-				<td>High Scores:</td>
-			</tr>
-			<tr>
-				<td>High Scores:</td>
-			</tr>
-		</table>
+		<div className="Container">
+			{allScores.map(country =>{
+				return (
+					<table>
+						<tr>
+							<th>High Scores:{country.name}</th>
+						</tr>
+					</table>
+				)
+			})}
+		</div>
 	);
 };
 

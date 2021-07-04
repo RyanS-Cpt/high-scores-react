@@ -25,18 +25,19 @@ Example Screenshot:
 
 ### Level 1 Challenge
 
-Write a React app which displays high score tables for the given data.
+`Write a React app which displays high score tables for the given data.`
 
-Each country must have its own High Score table displayed.
+* Each country must have its own High Score table displayed.
 
-Your app must be hosted on Netlify (see "Hosting" below).
+* Your app must be hosted on Netlify (see "Hosting" below).
 
-You must make AT LEAST:
+* You must make AT LEAST:
 
-HighScoreTable - a table with a country name and a list of player-scores for that country.
-PlayerScore - component responsible for displaying a single score by one player (e.g. as one line of the table) (e.g. Neill 2000)
-Getting Started
-Don't clone this repo.
+- HighScoreTable - a table with a country name and a list of player-scores for that country.
+- PlayerScore - component responsible for displaying a single score by one player (e.g. as one line of the table) (e.g. Neill 2000)
+
+## Getting Started
+`Don't clone this repo!`
 
 Make your own React app using create-react-app. See (this guide) if you have forgotten how.
 
