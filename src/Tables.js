@@ -1,10 +1,18 @@
 import React from "react";
 import allScores from "./scores.js";
+const sortedScores = allScores.sort((countryA, countryB) => {
+	// console.log("This is A", countryA.name, "This is B", countryB.name);
+	if (countryA.name < countryB.name) {
+		return -1;
+	} else {
+		return 1;
+	}
+});
 
 const Tables = () => {
 	return (
 		<div className="Container">
-			{allScores.map((country, index) => {
+			{sortedScores.map((country, index) => {
 				return (
 					<table key={index}>
 						<thead>
@@ -12,18 +20,19 @@ const Tables = () => {
 								<th>High Scores: {country.name}</th>
 							</tr>
 						</thead>
-						{country.scores.map((score, index) => {
-							return (
-								<tbody key={index}>
-									<tr>
+						<tbody>
+							{country.scores.map((score, index) => {
+								return (
+									<tr key={index}>
 										<td>
 											<span>{score.n}</span>
 											<span>{score.s}</span>
 										</td>
 									</tr>
-								</tbody>
-							);
-						})}
+								);
+							})}
+						</tbody>
+						;
 					</table>
 				);
 			})}
