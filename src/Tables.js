@@ -1,6 +1,6 @@
 import React from "react";
 import allScores from "./scores.js";
-const sortedScores = allScores.sort((countryA, countryB) => {
+const sortedCountryScores = allScores.sort((countryA, countryB) => {
 	// console.log("This is A", countryA.name, "This is B", countryB.name);
 	if (countryA.name < countryB.name) {
 		return -1;
@@ -12,7 +12,10 @@ const sortedScores = allScores.sort((countryA, countryB) => {
 const Tables = () => {
 	return (
 		<div className="Container">
-			{sortedScores.map((country, index) => {
+			{sortedCountryScores.map((country, index) => {
+				const sortedScores = country.scores.sort(
+					(scoreA, scoreB) => scoreB.s - scoreA.s
+				);
 				return (
 					<table key={index}>
 						<thead>
@@ -21,7 +24,7 @@ const Tables = () => {
 							</tr>
 						</thead>
 						<tbody>
-							{country.scores.map((score, index) => {
+							{sortedScores.map((score, index) => {
 								return (
 									<tr key={index}>
 										<td>
