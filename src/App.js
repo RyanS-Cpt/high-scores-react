@@ -4,6 +4,7 @@ import Tables from "./Tables";
 
 function App() {
 	const [buttonSwitch, setButtonSwitch] = useState(0);
+	const [tableSwitch, setTableSwitch] = useState(0);
 	return (
 		<div className="Main-container">
 			<header className="App-header">
@@ -16,7 +17,14 @@ function App() {
 			>
 				Rearrange scores
 			</button>
-			<Tables stateVar={buttonSwitch} />
+			<button
+				onClick={() =>
+					tableSwitch === 0 ? setTableSwitch(1) : setTableSwitch(0)
+				}
+			>
+				Display Individual/Global scores
+			</button>
+			<Tables stateVar={buttonSwitch} tableSelect={tableSwitch} />
 		</div>
 	);
 }
