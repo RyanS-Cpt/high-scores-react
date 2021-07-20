@@ -3,8 +3,8 @@ import "./App.css";
 import Tables from "./Tables";
 
 function App() {
-	const [buttonSwitch, setButtonSwitch] = useState(0);
-	const [tableSwitch, setTableSwitch] = useState(0);
+	const [buttonSwitch, setButtonSwitch] = useState(0); //Variable to toggle score orders
+	const [tableSwitch, setTableSwitch] = useState(0); //Variable to switch between tables
 	return (
 		<div className="Main-container">
 			<header className="App-header">

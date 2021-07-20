@@ -64,7 +64,7 @@ const Tables = (props) => {
 		);
 	} else {
 		return (
-			//Render global table
+			//Render global table ? move into separate component and render here
 			<table>
 				<thead>
 					<tr>
