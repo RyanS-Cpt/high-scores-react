@@ -1,28 +1,22 @@
 import React from "react";
 import allScores from "./scores.js";
 const globalScores = [];
-for(let country in allScores){
-	for(let score in country.scores){
+
+//embedded for loop to extract score data
+for (let country of allScores) {
+	for (let score of country.scores) {
 		if (!globalScores.includes(score)) {
 			globalScores.push(score);
 		}
 	}
 }
+
+//Sort and store extracted data in a variable
 const sortedGlobalScores = globalScores.sort(
-			(scoreA, scoreB) => scoreB.s - scoreA.s
-		);
-// const sortedGlobalScores = allScores.map((country) => {
-// 	return country.scores.map((score) => {
-// 		if (!globalScores.includes(score)) {
-// 			globalScores.push(score);
-// 		}
-// 		const sortGlobalScores = globalScores.sort(
-// 			(scoreA, scoreB) => scoreB.s - scoreA.s
-// 		);
-// 		return sortGlobalScores;
-// 	});
-// });
-console.log("This is sorted global scores", sortedGlobalScores);
+	(scoreA, scoreB) => scoreB.s - scoreA.s
+);
+
+//Sort and store all data in a variable for individual tables
 const sortedCountryScores = allScores.sort((countryA, countryB) => {
 	if (countryA.name < countryB.name) {
 		return -1;
@@ -33,6 +27,7 @@ const sortedCountryScores = allScores.sort((countryA, countryB) => {
 
 const Tables = (props) => {
 	if (props.tableSelect === 1) {
+		//render one table per country
 		return (
 			<div className="Container">
 				{sortedCountryScores.map((country, index) => {
@@ -69,6 +64,7 @@ const Tables = (props) => {
 		);
 	} else {
 		return (
+			//Render global table
 			<table>
 				<thead>
 					<tr>
@@ -77,7 +73,6 @@ const Tables = (props) => {
 				</thead>
 				<tbody>
 					{sortedGlobalScores.map((item, index) => {
-						console.log("This is each score", item);
 						return (
 							<tr key={index}>
 								<td>
