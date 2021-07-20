@@ -1,6 +1,18 @@
 import React from "react";
 import allScores from "./scores.js";
 const globalScores = [];
+const sortedGlobalScores = allScores.map((country) => {
+	return country.scores.map((score) => {
+		if (!globalScores.includes(score)) {
+			globalScores.push(score);
+		}
+		const sortGlobalScores = globalScores.sort(
+			(scoreA, scoreB) => scoreB.s - scoreA.s
+		);
+		return sortGlobalScores;
+	});
+});
+console.log("This is sorted global scores", sortedGlobalScores);
 const sortedCountryScores = allScores.sort((countryA, countryB) => {
 	if (countryA.name < countryB.name) {
 		return -1;
@@ -40,7 +52,6 @@ const Tables = (props) => {
 									);
 								})}
 							</tbody>
-							;
 						</table>
 					);
 				})}
@@ -55,26 +66,16 @@ const Tables = (props) => {
 					</tr>
 				</thead>
 				<tbody>
-					{allScores.map((country) => {
-						return country.scores.map((score) => {
-							if (!globalScores.includes(score)) {
-								globalScores.push(score);	
-							}
-							const sortedGlobalScores = globalScores.sort(
-								(scoreA, scoreB) => scoreB.s - scoreA.s
-							);
-							console.log("This is sorted global scores", sortedGlobalScores);
-							return sortedGlobalScores.map((item, index) => {
-								return (
-									<tr key={index}>
-										<td>
-											<span>{item.n}</span>
-											<span>{item.s}</span>
-										</td>
-									</tr>
-								);
-							});
-						});
+					{sortedGlobalScores.map((item, index) => {
+						console.log("This is each score", item);
+						return (
+							<tr key={index}>
+								<td>
+									<span>{item.n}</span>
+									<span>{item.s}</span>
+								</td>
+							</tr>
+						);
 					})}
 				</tbody>
 			</table>
