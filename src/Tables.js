@@ -1,17 +1,27 @@
 import React from "react";
 import allScores from "./scores.js";
 const globalScores = [];
-const sortedGlobalScores = allScores.map((country) => {
-	return country.scores.map((score) => {
+for(let country in allScores){
+	for(let score in country.scores){
 		if (!globalScores.includes(score)) {
 			globalScores.push(score);
 		}
-		const sortGlobalScores = globalScores.sort(
+	}
+}
+const sortedGlobalScores = globalScores.sort(
 			(scoreA, scoreB) => scoreB.s - scoreA.s
 		);
-		return sortGlobalScores;
-	});
-});
+// const sortedGlobalScores = allScores.map((country) => {
+// 	return country.scores.map((score) => {
+// 		if (!globalScores.includes(score)) {
+// 			globalScores.push(score);
+// 		}
+// 		const sortGlobalScores = globalScores.sort(
+// 			(scoreA, scoreB) => scoreB.s - scoreA.s
+// 		);
+// 		return sortGlobalScores;
+// 	});
+// });
 console.log("This is sorted global scores", sortedGlobalScores);
 const sortedCountryScores = allScores.sort((countryA, countryB) => {
 	if (countryA.name < countryB.name) {
