@@ -56,19 +56,24 @@ const Tables = (props) => {
 				</thead>
 				<tbody>
 					{allScores.map((country) => {
-						return country.scores.map((score, index) => {
-							globalScores.push(score);
-							// console.log(globalScores);
-							const sortedScores = globalScores.sort((scoreA, scoreB)=> scoreB.s - scoreA.s);
-							console.log("This is sorted global scores", sortedScores);
-							return (
-								<tr key={index}>
-									<td>
-										<span>{score.n}</span>
-										<span>{score.s}</span>
-									</td>
-								</tr>
+						return country.scores.map((score) => {
+							if (!globalScores.includes(score)) {
+								globalScores.push(score);	
+							}
+							const sortedGlobalScores = globalScores.sort(
+								(scoreA, scoreB) => scoreB.s - scoreA.s
 							);
+							console.log("This is sorted global scores", sortedGlobalScores);
+							return sortedGlobalScores.map((item, index) => {
+								return (
+									<tr key={index}>
+										<td>
+											<span>{item.n}</span>
+											<span>{item.s}</span>
+										</td>
+									</tr>
+								);
+							});
 						});
 					})}
 				</tbody>
